@@ -18,3 +18,8 @@
 
   border-bottom-right-radius: 60% 30%;
 }
+
+.btnMix {
+  right: 0;
+  margin-right: 120px;
+}

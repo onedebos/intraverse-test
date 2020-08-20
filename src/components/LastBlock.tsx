@@ -7,7 +7,13 @@ import styles from "../styles/LastBlock.module.css";
 
 const LastBlock: React.FC = () => {
   return (
-    <div className="bg-blue-50">
+    <div className="bg-blue-50 md:relative">
+      <div
+        className={`absolute text-5xl bottom-0 text-red-600 ${styles.btnMix} hidden md:block`}
+      >
+        <button className="rounded-full bg-gray-1000 p-4 mr-4"></button>
+        <button className="rounded-full bg-blue-1002 p-4"></button>
+      </div>
       <section
         className={`px-10 last py-16 flex flex-col justify-center items-center m-auto ${styles.lastBlockBg}`}
       >
@@ -33,7 +39,7 @@ const LastBlock: React.FC = () => {
               }}
             />
             <div>
-              <button className="bg-blue-1000 px-6 mr-16 rounded-md py-2 text-white">
+              <button className="bg-blue-1000 px-2 md:px-6 mr-6 md:mr-16 rounded-md py-2 text-white">
                 Add to cart
               </button>
             </div>
