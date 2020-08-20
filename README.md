@@ -11,7 +11,7 @@ A simple React application that consumes a custom API.
 
 ## Live
 
-[Click here](https://type-fastr.netlify.app)
+[Click here](https://intraverse.netlify.app)
 
 ## Getting Started
 

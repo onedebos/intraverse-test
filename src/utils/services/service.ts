@@ -1,15 +1,28 @@
-import { db } from "./firebase";
+import axios from "axios";
+const baseUrl = "https://staging.odio.com.ng/v1";
 
-export interface RankingObj {
-  playerName: string;
-  wpm: number;
-  cpm: number;
+export interface SignUpObj {
+  email: string;
+  password: string;
+  type: string;
+  confirm_password: string;
+  first_name: string;
+  last_name: string;
 }
 
-export const getFromFireStore = async () => {
-  return db.collection("typingRanking").get();
+export interface LoginObj {
+  email: string;
+  password: string;
+}
+
+export const signUp = async (params: SignUpObj) => {
+  return axios.post(`${baseUrl}/register`, {
+    params,
+  });
 };
 
-export const sendToFireStore = async (player: RankingObj) => {
-  return db.collection("typingRanking").doc().set(player);
+export const login = async (params: LoginObj) => {
+  return axios.post(`${baseUrl}/login`, {
+    params,
+  });
 };

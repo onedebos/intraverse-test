@@ -17,26 +17,6 @@ code {
 /* purgecss end ignore */
 @tailwind components;
 
-.main-bg-color {
-  background-color: #f7faff;
-}
-
-.text-main-color {
-  color: #00234b;
-}
-
-.text-sub-color {
-  color: #624de3;
-}
-
-.button-color {
-  background-color: #624de3;
-}
-
-.sub-bg-color {
-  background-color: #00234b;
-}
-
 #loading {
   display: inline-block;
   width: 20px;

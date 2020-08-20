@@ -1,48 +1,16 @@
 import React from "react";
+import FooterComponent from "./FooterComponent";
+import Button from "./LoremIpsumButton";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="mt-40 md:mt-0 sub-bg-color p-10 w-full">
-      <div className="flex justify-evenly flex-col md:flex-row ">
-        <div>
-          <h2
-            className="text-white font-bold text-3xl"
-            data-testid="footer-logo"
-          >
-            TypeFastr
-          </h2>
-          <h4 className="text-white text-sm">
-            &copy; 2020, <a href="https://adebola.dev">Designed by Adebola.</a>
-          </h4>
-        </div>
-        <div className="flex flex-col mt-4 md:mt-0">
-          <h1 className="text-white font-bold">About Creator</h1>
-          <h3 className="text-gray-500">
-            <a href="https://blog.adebola.dev">Blog</a>
-          </h3>
-          <h3 className="text-gray-500">
-            <a href="https://adebola.dev">Portfolio</a>
-          </h3>
-        </div>
-        <div className="flex flex-col mt-4 md:mt-0">
-          <h1 className="text-white font-bold">Contact</h1>
-          <h3 className="text-gray-500">
-            <a href="https://blog.adebola.dev">Blog</a>
-          </h3>
-          <h3 className="text-gray-500">
-            <a href="https://adebola.dev">Portfolio</a>
-          </h3>
-        </div>
-        <div className="flex flex-col mt-4 md:mt-0">
-          <h1 className="text-white font-bold">More</h1>
-          <h3 className="text-gray-500">
-            <a href="https://blog.adebola.dev">TypeFastr</a>
-          </h3>
-          <h3 className="text-gray-500">
-            <a href="https://filelockrr.com">Other Products</a>
-          </h3>
-        </div>
+    <footer className="bg-blue-50 py-40 text-center">
+      <div className="flex justify-center max-w-screen-lg m-auto text-left">
+        <FooterComponent bgColor="bg-white" />
+        <FooterComponent bgColor="bg-teal-1000" />
       </div>
+      <h3 className="my-10">Lorem ipsum now?</h3>
+      <Button />
     </footer>
   );
 };
