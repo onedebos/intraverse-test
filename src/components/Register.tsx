@@ -76,7 +76,7 @@ const Register: React.FC<RegisterProps> = ({
               onChange={handlePasswordChange}
               required
               autoComplete="true"
-              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$"
             />
             <small className="text-center px-20">
               Passwords should have at least 1 upper case, 1 lower case letter,
