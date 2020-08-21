@@ -10,7 +10,7 @@ import {
 
 const Login = () => {
   const dispatch = useDispatch();
-  const { email, password, loading } = useSelector(userSelector);
+  const { email, password, message, loading } = useSelector(userSelector);
 
   const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -32,6 +32,7 @@ const Login = () => {
         }
         handleSubmit={handleSubmit}
         loading={loading}
+        message={message}
       />
     </React.Fragment>
   );

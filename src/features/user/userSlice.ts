@@ -44,7 +44,7 @@ const userSlice = createSlice({
     },
 
     setEmail: (state, { payload }: PayloadAction<string>) => {
-      state.firstName = payload;
+      state.email = payload;
     },
 
     setPassword: (state, { payload }: PayloadAction<string>) => {
@@ -78,12 +78,10 @@ export const signUpNewUser = (user: SignUpObj): AppThunk => {
   return async (dispatch) => {
     dispatch(setLoading(true));
     try {
-      const res = await signUp(user);
+      await signUp(user);
       dispatch(setMessage("Congrats, successfully signed up!."));
-      console.log(res);
-      setLoading(false);
+      dispatch(setLoading(false));
     } catch (error) {
-      console.log(error);
       dispatch(setErrors(error.message));
       dispatch(setMessage("Sorry, something went wrong while signing you up."));
       dispatch(setLoading(false));
@@ -95,14 +93,12 @@ export const loginUser = (user: LoginObj): AppThunk => {
   return async (dispatch) => {
     dispatch(setLoading(true));
     try {
-      const res = await login(user);
+      await login(user);
       dispatch(setMessage("Congrats, successfully signed in!."));
-      console.log(res);
-      setLoading(false);
+      dispatch(setLoading(false));
     } catch (error) {
-      console.log(error);
       dispatch(setErrors(error.message));
-      dispatch(setMessage("Sorry, something went wrong while signing you in."));
+      dispatch(setMessage("Sorry, your account is inactive."));
       dispatch(setLoading(false));
     }
   };

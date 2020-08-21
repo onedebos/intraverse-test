@@ -9,6 +9,7 @@ interface LoginProps {
   handlePasswordChange: (e: React.FormEvent<HTMLInputElement>) => void;
   handleSubmit: any;
   loading: boolean;
+  message: string;
 }
 
 const Login: React.FC<LoginProps> = ({
@@ -16,6 +17,7 @@ const Login: React.FC<LoginProps> = ({
   handlePasswordChange,
   handleSubmit,
   loading,
+  message,
 }) => {
   return (
     <React.Fragment>
@@ -57,12 +59,16 @@ const Login: React.FC<LoginProps> = ({
           >
             {loading ? <span id="loading"></span> : "Log In"}
           </button>
-          <p className="text-center mt-4">
-            Don't have an account?
-            <Link to="/register" className="ml-2 text-blue-1003">
-              Sign Up
-            </Link>
-          </p>
+          {!message ? (
+            <p className="text-center mt-4">
+              Don't have an account?
+              <Link to="/register" className="ml-2 text-blue-1003">
+                Sign Up
+              </Link>
+            </p>
+          ) : (
+            <p className="text-center mt-4">{message}</p>
+          )}
         </form>
       </div>
     </React.Fragment>

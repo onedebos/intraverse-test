@@ -16,13 +16,10 @@ export interface LoginObj {
 }
 
 export const signUp = async (params: SignUpObj) => {
-  return axios.post(`${baseUrl}/register`, {
-    params,
-  });
+  console.log(params);
+  return axios.post(`${baseUrl}/register`, params);
 };
 
 export const login = async (params: LoginObj) => {
-  return axios.post(`${baseUrl}/login`, {
-    params,
-  });
+  return axios.post(`${baseUrl}/login`, params);
 };

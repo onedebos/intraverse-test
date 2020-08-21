@@ -50,6 +50,7 @@ const Register: React.FC<RegisterProps> = ({
               className="border-2 border-blue-1003 w-2/3  p-2 rounded-md mb-3"
               onChange={handleFirstNameChange}
               required
+              autoComplete="true"
             />
             <input
               type="text"
@@ -57,6 +58,7 @@ const Register: React.FC<RegisterProps> = ({
               className="border-2 border-blue-1003 w-2/3 p-2 rounded-md mb-3"
               onChange={handleLastNameChange}
               required
+              autoComplete="true"
             />
 
             <input
@@ -65,6 +67,7 @@ const Register: React.FC<RegisterProps> = ({
               className="border-2 border-blue-1003 w-2/3 p-2 rounded-md mb-3"
               onChange={handleEmailChange}
               required
+              autoComplete="true"
             />
             <input
               type="password"
@@ -72,7 +75,8 @@ const Register: React.FC<RegisterProps> = ({
               className="border-2 border-blue-1003 w-2/3 p-2 rounded-md mb-3"
               onChange={handlePasswordChange}
               required
-              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+              autoComplete="true"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
             />
             <small className="text-center px-20">
               Passwords should have at least 1 upper case, 1 lower case letter,
