@@ -79,8 +79,8 @@ const Register: React.FC<RegisterProps> = ({
               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,}$"
             />
             <small className="text-center px-20">
-              Passwords should have at least 1 upper case, 1 lower case letter,
-              1 number and at least 8 characters.
+              Passwords must contain an upper case letter, a lower case letter,
+              a number, a symbol and be at least 8 characters.
             </small>
 
             <div className="text-center">
