@@ -1,6 +1,6 @@
 import React from "react";
 import Menu from "./Menu";
-import "../styles/Login.css";
+import { Link } from "react-router-dom";
 
 interface LoginProps {
   email?: string;
@@ -57,6 +57,12 @@ const Login: React.FC<LoginProps> = ({
           >
             {loading ? <span id="loading"></span> : "Log In"}
           </button>
+          <p className="text-center mt-4">
+            Don't have an account?
+            <Link to="/register" className="ml-2 text-blue-1003">
+              Sign Up
+            </Link>
+          </p>
         </form>
       </div>
     </React.Fragment>
