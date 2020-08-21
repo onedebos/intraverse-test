@@ -25,7 +25,7 @@ const Register: React.FC<RegisterProps> = ({
   return (
     <div className="bg-blue-50">
       <Menu isBtnDisabled={true} />
-      <div className="lg:grid grid-cols-2 gap-0 pt-20 px-10 md:px-40 shadow-lg min-h-screen">
+      <div className="lg:grid grid-cols-2 gap-0 pt-20 px-4 md:px-40 shadow-lg min-h-screen">
         <img
           src={lady}
           alt="lady"

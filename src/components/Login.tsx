@@ -21,9 +21,9 @@ const Login: React.FC<LoginProps> = ({
     <React.Fragment>
       <Menu isBtnDisabled={true} />
 
-      <div className="min-h-screen flex flex-col justify-center items-center m-auto py-10">
-        <div className="customer">
-          <div className="bg-blue-1001 text-white px-6 py-3 font-bold self-start">
+      <div className="min-h-auto flex flex-col justify-center items-center m-auto py-10">
+        <div className="w-3/4 md:w-3/4 lg:w-1/3">
+          <div className="bg-blue-1001 text-white px-4 py-3 font-bold w-1/2 md:w-1/4 lg:w-1/4">
             <h2>Customer</h2>
           </div>
         </div>
