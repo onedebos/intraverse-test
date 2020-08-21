@@ -48,7 +48,7 @@ const userSlice = createSlice({
     },
 
     setPassword: (state, { payload }: PayloadAction<string>) => {
-      state.firstName = payload;
+      state.password = payload;
     },
     setErrors: (state, { payload }: PayloadAction<string>) => {
       state.firstName = payload;

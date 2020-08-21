@@ -92,13 +92,13 @@ const Register: React.FC<RegisterProps> = ({
               {message ? (
                 message
               ) : (
-                <p>
+                <span>
                   Already Signed up?
                   <Link to="/login" className="text-blue-600">
                     {" "}
                     Login
                   </Link>{" "}
-                </p>
+                </span>
               )}
             </p>
           </div>
